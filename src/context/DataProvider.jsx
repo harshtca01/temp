@@ -7,7 +7,7 @@ export default function DataProvider({ children }) {
       name: "Dr. Clark Johnson",
       specialist:
         "Neurologist specializing in brain and nervous system disorders",
-      url: "/src/assets/doctor1.jpeg",
+      url: "src/assets/doctor1.jpeg",
       btnLink: "#",
     },
     {
@@ -15,7 +15,7 @@ export default function DataProvider({ children }) {
       name: "Dr. Innis Thompson",
       specialist:
         "Gynecologist providing comprehensive women's healthcare services",
-      url: "/src/assets/doctor2.jpeg",
+      url: "src/assets/doctor2.jpeg",
       btnLink: "#",
     },
     {
@@ -23,7 +23,7 @@ export default function DataProvider({ children }) {
       name: "Dr. John Smith",
       specialist:
         "Cardiologist with extensive experience in treating heart conditions",
-      url: "/src/assets/doctor3.jpeg",
+      url: "src/assets/doctor3.jpeg",
       btnLink: "#",
     },
     {
@@ -31,7 +31,7 @@ export default function DataProvider({ children }) {
       name: "Dr. Olivia Reynolds",
       specialist:
         "Professionals committed to providing the highest quality care to patients",
-      url: "/src/assets/doctor4.jpeg",
+      url: "src/assets/doctor4.jpeg",
       btnLink: "#",
     },
   ];
