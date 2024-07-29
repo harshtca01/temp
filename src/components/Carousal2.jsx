@@ -48,7 +48,7 @@ function Responsive() {
 
   return (
     <div className="bg-gray-200 pb-16">
-      <div className="slider-container max-w-7xl w-[92%] mx-auto">
+      <div className="slider-container max-w-9xl w-[92%] mx-auto">
         <Slider {...settings}>
           {doctorList?.map((val, i) => (
             <div key={i}>

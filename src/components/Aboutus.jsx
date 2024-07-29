@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import DataContext from "../context/useContext";
+import Aboutus1 from "../assets/Aboutus1.gif";
+import Aboutus2 from "../assets/Aboutus2.png";
 
 export default function Aboutus() {
   const { aboutCardData } = useContext(DataContext);
   return (
-    <div className='max-w-7xl w-[90%] mx-auto'>
+    <div className='max-w-9xl w-[90%] mx-auto'>
       <div className=' py-16 '>
         <div className='text-center text-[#159eec] text-lg font-bold font-Work-Sans uppercase tracking-[2.88px]'>
           Get in touch
@@ -29,15 +31,15 @@ export default function Aboutus() {
           are committed to continuously improving and expanding our services to
           meet the needs of our community.
           <img
-            src='src/assets/Aboutus2.png'
+            src={Aboutus2}
             alt=''
             className='absolute lg:block hidden right-0 bottom-0 h-56 mix-blend-multiply aspect-auto rounded-b-sm'
           />
         </div>
         <div className='flex items-center w-full justify-center'>
-          <div className='clip-path overflow-hidden size-96 '>
+          <div className='ellipse-clip overflow-hidden'>
             <img
-              src='src/assets/Aboutus1.gif'
+              src={Aboutus1}
               alt=''
               className='h-full w-full object-cover'
             />

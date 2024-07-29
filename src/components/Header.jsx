@@ -8,22 +8,22 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-[#1f2b6c] flex items-center p-2 sm:p-4 lg:p-6">
-      <div className="w-full max-w-7xl mx-auto relative">
+    <nav className="bg-[#1f2b6c] flex items-center p-2 sm:p-4 lg:p-6 xl:p-8 2xl:p-10 max-w-9xl mx-auto">
+      <div className="w-full max-w-9xl mx-auto relative">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <img src={logoIcon} className="w-14 h-12 object-cover" alt="Logo" />
-            <div className="hidden md:flex ml-20">
+            <div className="hidden md:flex ml-20 xl:ml-24 2xl:ml-28">
               <NavBar />
             </div>
           </div>
-          <div className="hidden md:flex items-center space-x-6">
-          <img src={UKIcon} className="mx-2 w-9 h-4 object-cover" alt="UK Icon" />
+          <div className="hidden md:flex items-center space-x-6 xl:space-x-8 2xl:space-x-10">
+            <img src={UKIcon} className="mx-2 w-9 h-4 object-cover" alt="UK Icon" />
             <FaBell className="mx-2 text-white w-7 h-7" />
-            <button className="bg-[#159eec] h-10 px-4 rounded-lg text-white text-xs">
+            <button className="bg-[#159eec] h-10 px-4 rounded-lg text-white text-xs xl:text-sm 2xl:text-base">
               Sign in
             </button>
-            <button className="bg-[#bfd2f8] h-10 px-4 rounded-lg text-[#1f2b6c] text-xs">
+            <button className="bg-[#bfd2f8] h-10 px-4 rounded-lg text-[#1f2b6c] text-xs xl:text-sm 2xl:text-base">
               Book Appointment
             </button>
           </div>
@@ -39,20 +39,20 @@ export default function Header() {
             <div className="p-4 space-y-4">
               <NavBar isMobile />
               <div className="text-center">
-              <img src={UKIcon} className="mt-4 my-2 w-7 h-7 mx-auto mb-4" alt="UK Icon" />
-            </div>
-            <ul className="space-y-2">
-              <li className="flex justify-center">
-                <button className="my-2 bg-[#bfd2f8] h-10 px-4 rounded-lg text-[#1f2b6c] text-xs w-auto">
-                  Book Appointment
-                </button>
-              </li>
-              <li className="flex justify-center">
-                <button className="my-2 bg-[#159eec] h-10 px-4 rounded-lg text-white text-xs w-auto">
-                  Sign in
-                </button>
-              </li>
-            </ul>
+                <img src={UKIcon} className="mt-4 my-2 w-7 h-7 mx-auto mb-4" alt="UK Icon" />
+              </div>
+              <ul className="space-y-2">
+                <li className="flex justify-center">
+                  <button className="my-2 bg-[#bfd2f8] h-10 px-4 rounded-lg text-[#1f2b6c] text-xs w-auto">
+                    Book Appointment
+                  </button>
+                </li>
+                <li className="flex justify-center">
+                  <button className="my-2 bg-[#159eec] h-10 px-4 rounded-lg text-white text-xs w-auto">
+                    Sign in
+                  </button>
+                </li>
+              </ul>
             </div>
           </div>
         )}
@@ -69,9 +69,7 @@ const NavLink = ({ title, path, index, isDropdown, children }) => {
       <div className="relative inline-block text-left">
         <button
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-          className={`flex items-center text-base ${
-            index === 0 ? "text-white" : "text-[#bfd2f8]"
-          }`}
+          className={`flex items-center text-base ${index === 0 ? "text-white" : "text-[#bfd2f8]"}`}
         >
           {title}
           <svg
@@ -102,12 +100,7 @@ const NavLink = ({ title, path, index, isDropdown, children }) => {
   }
 
   return (
-    <a
-      href={path}
-      className={`flex items-center text-base ${
-        index === 0 ? "text-white" : "text-[#bfd2f8]"
-      }`}
-    >
+    <a href={path} className={`flex items-center text-base ${index === 0 ? "text-white" : "text-[#bfd2f8]"}`}>
       {title}
     </a>
   );
@@ -140,16 +133,13 @@ NavLink.propTypes = {
 
 const NavBar = ({ isMobile }) => {
   return (
-    <div className={`flex ${isMobile ? "flex-col items-center" : "flex-col md:flex-row md:space-x-8"} space-y-4 md:space-y-0`}>
+    <div className={`flex ${isMobile ? "flex-col items-center" : "flex-col md:flex-row md:space-x-8 lg:space-x-10 xl:space-x-12 2xl:space-x-14"} space-y-4 md:space-y-0`}>
       {navList.map((link, i) =>
         link.isDropdown ? (
           <NavLink key={i} index={i} title={link.title} isDropdown>
             {link.dropdownItems.map((item, j) => (
               <li key={j} className="flex justify-center">
-                <a
-                  href={item.path}
-                  className="block px-4 py-2 hover:bg-gray-700"
-                >
+                <a href={item.path} className="block px-4 py-2 hover:bg-gray-700">
                   {item.title}
                 </a>
               </li>

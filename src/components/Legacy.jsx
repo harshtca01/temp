@@ -5,8 +5,9 @@ import DataContext from "../context/useContext";
 export default function Legacy() {
   const { legacyCard } = useContext(DataContext);
   return (
-    <div className=' mt-16 py-8 bg-gray-300'>
-      <div className='max-w-7xl w-[90%] mx-auto relative'>
+    <div className='max-w-9xl mx-auto'>
+      <div className=' mt-16 py-8'>
+      <div className='max-w-9xl w-[90%] mx-auto relative'>
         <div className=' text-center text-[#1f2b6c] text-[50px] font-normal font-Yeseva-One'>
           Our Legacy
         </div>
@@ -29,6 +30,7 @@ export default function Legacy() {
             );
           })}
         </div>
+      </div>
       </div>
     </div>
   );

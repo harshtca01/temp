@@ -1,11 +1,11 @@
 import logoIcon from "../assets/logo.png";
 export default function Footer() {
   return (
-    <footer className='bg-[#161e54]' aria-labelledby='footer-heading'>
+    <footer className='bg-[#161e54] max-w-9xl mx-auto' aria-labelledby='footer-heading'>
       <h2 id='footer-heading' className='sr-only'>
         Footer
       </h2>
-      <div className='max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8'>
+      <div className='max-w-9xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8'>
         <div className='xl:grid xl:grid-cols-3 xl:gap-8'>
           <div className='xl:col-span-1 flex gap-5'>
             <img
