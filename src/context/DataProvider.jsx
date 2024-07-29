@@ -1,5 +1,9 @@
 import PropTypes from "prop-types";
 import DataContext from "../context/useContext";
+import doctor1 from "../assets/doctor1.jpeg";
+import doctor2 from "../assets/doctor2.jpeg";
+import doctor3 from "../assets/doctor3.jpeg";
+import doctor4 from "../assets/doctor4.jpeg";
 export default function DataProvider({ children }) {
   const doctorList = [
     {
@@ -7,7 +11,7 @@ export default function DataProvider({ children }) {
       name: "Dr. Clark Johnson",
       specialist:
         "Neurologist specializing in brain and nervous system disorders",
-      url: "src/assets/doctor1.jpeg",
+      url: doctor1,
       btnLink: "#",
     },
     {
@@ -15,7 +19,7 @@ export default function DataProvider({ children }) {
       name: "Dr. Innis Thompson",
       specialist:
         "Gynecologist providing comprehensive women's healthcare services",
-      url: "src/assets/doctor2.jpeg",
+      url: doctor2,
       btnLink: "#",
     },
     {
@@ -23,7 +27,7 @@ export default function DataProvider({ children }) {
       name: "Dr. John Smith",
       specialist:
         "Cardiologist with extensive experience in treating heart conditions",
-      url: "src/assets/doctor3.jpeg",
+      url: doctor3,
       btnLink: "#",
     },
     {
@@ -31,7 +35,7 @@ export default function DataProvider({ children }) {
       name: "Dr. Olivia Reynolds",
       specialist:
         "Professionals committed to providing the highest quality care to patients",
-      url: "src/assets/doctor4.jpeg",
+      url: doctor4,
       btnLink: "#",
     },
   ];
@@ -69,54 +73,6 @@ export default function DataProvider({ children }) {
       url: "https://th.bing.com/th/id/OIP.7ZuYwrIdy7FFk5IXAI7bcAHaGl?rs=1&pid=ImgDetMain",
     },
     {
-      id: 1,
-      name: "Mr. Mark Hannery",
-      review:
-        "Exceptional care and outstanding service - a hospital that truly puts patients first.",
-      rating: 3,
-      url: "https://th.bing.com/th/id/OIP.7ZuYwrIdy7FFk5IXAI7bcAHaGl?rs=1&pid=ImgDetMain",
-    },
-    {
-      id: 1,
-      name: "Mr. Mark Hannery",
-      review:
-        "Exceptional care and outstanding service - a hospital that truly puts patients first.",
-      rating: 3,
-      url: "https://th.bing.com/th/id/OIP.7ZuYwrIdy7FFk5IXAI7bcAHaGl?rs=1&pid=ImgDetMain",
-    },
-    {
-      id: 1,
-      name: "Mr. Mark Hannery",
-      review:
-        "Exceptional care and outstanding service - a hospital that truly puts patients first.",
-      rating: 3,
-      url: "https://th.bing.com/th/id/OIP.7ZuYwrIdy7FFk5IXAI7bcAHaGl?rs=1&pid=ImgDetMain",
-    },
-    {
-      id: 1,
-      name: "Mr. Mark Hannery",
-      review:
-        "Exceptional care and outstanding service - a hospital that truly puts patients first.",
-      rating: 3,
-      url: "https://th.bing.com/th/id/OIP.7ZuYwrIdy7FFk5IXAI7bcAHaGl?rs=1&pid=ImgDetMain",
-    },
-    {
-      id: 1,
-      name: "Mr. Mark Hannery",
-      review:
-        "Exceptional care and outstanding service - a hospital that truly puts patients first.",
-      rating: 3,
-      url: "https://th.bing.com/th/id/OIP.7ZuYwrIdy7FFk5IXAI7bcAHaGl?rs=1&pid=ImgDetMain",
-    },
-    {
-      id: 1,
-      name: "Mr. Mark Hannery",
-      review:
-        "Exceptional care and outstanding service - a hospital that truly puts patients first.",
-      rating: 3,
-      url: "https://th.bing.com/th/id/OIP.7ZuYwrIdy7FFk5IXAI7bcAHaGl?rs=1&pid=ImgDetMain",
-    },
-    {
       id: 2,
       name: "Mr. Mikeal Clark",
       review:
@@ -141,9 +97,16 @@ export default function DataProvider({ children }) {
       url: "https://th.bing.com/th/id/OIP.7ZuYwrIdy7FFk5IXAI7bcAHaGl?rs=1&pid=ImgDetMain",
     },
   ];
-
+  const appointmentSelectOptions = [
+    { label: "Location Name", options: ["Location 1", "Location 2", "Location 3"] },
+    { label: "Appointment Type", options: ["Type 1", "Type 2", "Type 3"] },
+    { label: "Select Date", options: ["Date 1", "Date 2", "Date 3"] },
+    { label: "Physician Specialty", options: ["Specialty 1", "Specialty 2", "Specialty 3"] },
+    { label: "Appointment Reason", options: ["Reason 1", "Reason 2", "Reason 3"] },
+    { label: "Appointment Reason", options: ["Reason 1", "Reason 2", "Reason 3"] },
+  ];
   return (
-    <DataContext.Provider value={{ doctorList, legacyCard, aboutCardData }}>
+    <DataContext.Provider value={{ doctorList, legacyCard, aboutCardData, appointmentSelectOptions }}>
       {children}
     </DataContext.Provider>
   );
