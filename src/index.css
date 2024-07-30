@@ -5,7 +5,9 @@
 .bottom-20px {
   bottom: 20px !important;
 }
-
+body {
+  overflow-x: hidden;
+}
 @layer utilities {
   .custom-shape {
     @apply relative w-72 h-72 bg-white overflow-hidden;
@@ -28,8 +30,8 @@
   clip-path: path('M472.071 245.381C472.071 351.568 510.27 413.302 402.99 413.302C295.71 413.302 0.796875 312.853 0.796875 206.666C0.796875 100.478 305.897 0.871582 413.177 0.871582C520.456 0.871582 472.071 139.193 472.071 245.381Z');
 }
 .clipped-element {
-  width: 1600px; /* Set the width of your element */
-  height: 890px; /* Set the height of your element */
+  width: -webkit-fill-available; /* Set the width of your element */
+  height: -webkit-fill-available; /* Set the height of your element */
   background-color: #ffffff; /* Background color of the element */
   background-size: cover; /* Ensure the background image covers the element */
   clip-path: path("M1941.81 75.1663C1941.81 584.641 2122.1 880.833 1615.76 880.833C1109.42 880.833 -282.525 398.891 -282.525 -110.583C-282.525 -620.058 1157.5 -1097.96 1663.84 -1097.96C2170.18 -1097.96 1941.81 -434.309 1941.81 75.1663Z");
@@ -40,8 +42,8 @@
 }
 
 .clipped-element2-background {
-  width: 1517.54px; /* Set the width of your element */
-  height: 1234.27px; /* Set the height of your element */
+  width: -webkit-fill-available; /* Set the width of your element */
+  height: -webkit-fill-available; /* Set the height of your element */
   background-color: #ffffff; /* Path to your background image */
   background-size: cover; /* Ensure the background image covers the element */
   background-position: center; /* Center the background image */
