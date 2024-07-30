@@ -36,7 +36,7 @@ export default function DataProvider({ children }) {
     },
     {
       id: 4,
-      name: "Dr. Olivia Reynolds",
+      name: "Dr. Olivia Reynold",
       specialist:
         "Professionals committed to providing the highest quality care to patients",
       url: doctor4,
